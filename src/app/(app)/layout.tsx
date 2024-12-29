@@ -1,5 +1,4 @@
 import Sidebar from "../components/sidebar/sidebar";
-import "../globals.css";
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode;}>) {
 

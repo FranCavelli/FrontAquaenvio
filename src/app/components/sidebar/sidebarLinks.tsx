@@ -10,7 +10,7 @@ export default function SidebarLinks(){
         { url: '/users' , name: 'Users', icon:''},
         { url: '/products' , name: 'Products', icon:''},
         { url: '/repart' , name: 'Reparto', icon:''},
-        { url: '/configuration_aquaenvio' , name: 'Configuration', icon:''},
+        { url: '/configuration' , name: 'Configuration', icon:''},
         { url: '/dashboard' , name: 'Dashboard', icon:''},
     ]
 

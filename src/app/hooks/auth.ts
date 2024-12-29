@@ -77,11 +77,15 @@ export const useAuth = ({ middleware, redirectIfAuthenticated }: UseAuthProps = 
     
             const { data } = response;
     
-            console.log('Login exitoso, datos:', data);
-    
             await mutate();
-    
-            if (setStatus) setStatus('Login exitoso');
+            
+            if(data.length==1){
+                router.push('/dashboard');
+            }else if(data.length==0){
+                router.push('/not-configurated-account');
+            }else{
+                router.push('/select-company');
+            }
         } catch (error: any) {
             if (error.response && error.response.status === 422) {
                 setErrors(error.response.data.errors);

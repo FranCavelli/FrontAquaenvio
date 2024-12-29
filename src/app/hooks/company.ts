@@ -19,7 +19,17 @@ export const useCompany = () => {
         return response.data;
     }
 
+    const getCompanys = async () => {
+        await csrf();
+        const response = await axios.get('api/getCompanys'); 
+
+        if(response.data.error==1) logout();
+        
+        return response.data;
+    }
+
     return {
         companiesByUser,
+        getCompanys,
     };
 };
