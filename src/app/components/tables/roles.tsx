@@ -23,17 +23,19 @@ export default function TablesRoles() {
     }, []);
 
     const columns = [
-        {name: "ID", uid: "id"},
-        {name: "NOMBRE", uid: "name", sortable: true},  
-        {name: "", uid: "actions"},
+        { name: "ID", uid: "id" },
+        { name: "NOMBRE", uid: "name", sortable: true },
+        { name: "", uid: "actions" },
     ]
-    
+
     const initialColumns = ["name", "actions"];
 
     return (
-        <div className="w-1/2 bg-white p-2 rounded-md">
-          <h2>ROLES</h2>
-          <Datatable data={data} columns={columns} initialColumns={initialColumns} controler={'user'}/>
+        <div className="w-full 2xl:w-1/2 p-1 rounded-md">
+            <div className="p-2 bg-white">
+                <h2 className='py-1 text-xl font-semibold'>ROLES</h2>
+                <Datatable data={data} columns={columns} initialColumns={initialColumns} controler={'user'} />
+            </div>
         </div>
     );
 }

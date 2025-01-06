@@ -5,7 +5,7 @@ import { useAuth } from '../../hooks/auth'
 export default function Register() {
 
     const { register } = useAuth({
-        middleware: 'guest',
+        middleware: 'auth',
         redirectIfAuthenticated: '/',
     })
 

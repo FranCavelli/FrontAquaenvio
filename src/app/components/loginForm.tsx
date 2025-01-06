@@ -35,7 +35,7 @@ export default function LoginForm() {
     return (
         <form method="POST" onSubmit={submitLogin} className='flex flex-col gap-4 w-2/3 '>
             <div className='w-full'>
-                 <Input type="email" label="Email" id='email' value={email} className='w-full no-border-input' onChange={(e) => setEmail(e.target.value)} />
+                 <Input type="email" label="Email" id='email' value={email} className='w-full no-border-input bg-white' variant='bordered' onChange={(e) => setEmail(e.target.value)} />
             </div>
             <div className='w-full'>
                 <Input
@@ -57,9 +57,10 @@ export default function LoginForm() {
                     id='password'
                 />
             </div>
-            <Button color="success" type="submit" >
-                Login
+            <Button color="success" className='text-white' type="submit" >
+                Ingresar
             </Button>
+            <p className='text-gray-400 -mt-2 text-md text-center'>¿Has olvidado tu contraseña? <a href="" className='text-blue-700'>Reestablecer</a></p>
         </form>
     );
 }
